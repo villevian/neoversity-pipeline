@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фаза 1 · Ініціалізація і збір вимог</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html">🏠 Пайплайн</a>
+  <span class="sep">›</span>
+  <span class="cur">Фаза 1 · Ініціалізація і збір вимог</span>
+</div>
+
+<div class="phase-banner" style="background:linear-gradient(135deg,#6D28D9,#7C3AED);">
+  <div class="phase-tag">Фаза 1 з 5</div>
+  <h1>Ініціалізація і збір вимог</h1>
+  <p>Отримуємо дисципліну → розуміємо масштаб → готуємо простір для роботи</p>
+</div>
+
+<div class="nav-pills">
+  <a class="pill active" href="phase-1.html" style="background:#7C3AED;">1 · Ініціалізація</a>
+  <a class="pill" href="phase-2.html">2 · Аналіз та Research</a>
+  <a class="pill" href="phase-3.html">3 · Розробка</a>
+  <a class="pill" href="phase-4.html">4 · Підготовка до старту</a>
+  <a class="pill" href="phase-5.html">5 · Старт потоку</a>
+</div>
+
+<div class="main">
+
+  <div class="artifact">
+    <span class="ico">🎁</span>
+    <div>
+      <div class="a-lbl">Артефакт фази</div>
+      <div class="a-txt">Сторінка дисципліни в Notion з заповненими вхідними даними + папка на Google Drive</div>
+    </div>
+  </div>
+
+  <div class="sec-lbl">Кроки</div>
+  <div class="steps">
+
+    <div class="step open">
+      <div class="step-hdr" onclick="toggleStep(this)">
+        <div class="snum" style="background:#DDD6FE;color:#5B21B6;">1</div>
+        <div class="step-title">Отримали дисципліну → переходимо до планування</div>
+        <div class="step-arrow">▶</div>
+      </div>
+      <div class="step-body">
+        <div class="why"><span class="wi">💡</span>Без розуміння годин, кредитів і місця дисципліни в навчальному плані неможливо правильно оцінити обсяг роботи і не злетіти з дедлайном.</div>
+        <ul class="notes">
+          <li>Відкриваємо Гант і знаходимо дисципліну. Дивимось: кількість годин, кредитів, тижнів</li>
+          <li>Уточнюємо у Даші та Аліни дедлайни розробки</li>
+          <li>Знаходимо дисципліну в таблиці ОПП — дивимось: який семестр, форма контролю, які дисципліни перед цим</li>
+        </ul>
+        <div class="links">
+          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/1fmjPh4i0w682fTiK4KNjOLV3Fx5nlGcYdcCfEuyLKbg/edit?gid=1283945675#gid=1283945675" target="_blank">📊 Загальний Гант Academic Neo</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">📓 ОПП та вимоги</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-hdr" onclick="toggleStep(this)">
+        <div class="snum" style="background:#DDD6FE;color:#5B21B6;">2</div>
+        <div class="step-title">Збираємо вимоги</div>
+        <div class="step-arrow">▶</div>
+      </div>
+      <div class="step-body">
+        <div class="why"><span class="wi">💡</span>Вимоги — це основа всього. Якщо на старті не зрозуміти обмеження (форма контролю, пререквізити, місце в програмі), потім доведеться переробляти вже готовий контент.</div>
+        <ul class="notes">
+          <li><strong>2.1</strong> — Сходити до Даші, спитати чи є вже якісь матеріали по цій дисципліні</li>
+          <li><strong>2.2</strong> — Забрати вимоги з таблиці спеціалізації, подивитись примітки</li>
+          <li><strong>2.3</strong> — Якщо є архів матеріалів — забрати: силабус, матеріали для живих занять</li>
+        </ul>
+        <div class="links">
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">📓 Таблиця спеціалізацій / ОПП</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">📓 База дисциплін маг-ри (архів)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-hdr" onclick="toggleStep(this)">
+        <div class="snum" style="background:#DDD6FE;color:#5B21B6;">3</div>
+        <div class="step-title">Створюємо папку на Drive і сторінку в Notion</div>
+        <div class="step-arrow">▶</div>
+      </div>
+      <div class="step-body">
+        <div class="why"><span class="wi">💡</span>Єдине місце зберігання всіх матеріалів з першого дня — гарантія того, що нічого не загубиться і команда завжди знає куди йти.</div>
+        <ul class="notes">
+          <li>В папці Drive Магістратура — створити підпапку для нової дисципліни</li>
+          <li>В Notion — відкрити базу маг-ри і створити/доповнити сторінку дисципліни</li>
+        </ul>
+        <div class="notion-box">
+          <div class="nb-title">📓 Структура сторінки в Notion — Вхідні дані</div>
+          <div class="nb-section">Вхідні дані</div>
+          <div class="nb-item">Дослідження ринку та конкурентів (за необхідності) <span class="who">— посилання, додає методолог</span></div>
+          <div class="nb-item">Програма</div>
+          <div class="nb-item">Форма контролю (іспит / залік / диф залік)</div>
+          <div class="nb-item">Наявність фін тестування</div>
+          <div class="nb-item">Кількість навчальних / аудиторних годин</div>
+          <div class="nb-item">Розподіл годин</div>
+          <div class="nb-item">► Наявні матеріали</div>
+          <div class="nb-item">► Необхідні пререквізити</div>
+          <div class="nb-item">► Зв'язок з попередніми та послідуючими курсами</div>
+          <div class="nb-item">► Інші особливості курсу</div>
+          <div class="nb-item">► Вимоги до автора курсу</div>
+          <div class="nb-section">Процес розробки</div>
+          <div class="nb-item">ОПП ІП3, ОПП ШІПІ</div>
+        </div>
+        <div class="links" style="margin-top:10px;">
+          <a class="lnk lnk-drive" href="https://drive.google.com/drive/folders/15NJ1A59mIMLZX3herwxqDjtsGe6q2So9" target="_blank">📁 Drive · Магістратура</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">📓 Notion · База маг-ри</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:32px;display:flex;gap:12px;justify-content:flex-end;">
+    <a class="lnk lnk-notion" href="phase-2.html" style="padding:8px 18px;font-size:13px;">Наступна фаза: Аналіз та Research →</a>
+  </div>
+
+</div>
+
+<div class="footer">Neoversity Academic · Instructional Designer · Магістратура</div>
+
+<script>
+function toggleStep(hdr){hdr.closest('.step').classList.toggle('open');}
+</script>
+</body>
+</html>

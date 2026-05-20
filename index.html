@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neoversity · Пайплайн розробки дисципліни</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.hero{background:linear-gradient(135deg,#1E1B2E 0%,#312E81 60%,#4338CA 100%);padding:48px 40px 36px;color:white;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;background:rgba(139,92,246,.1);}
+.hero-tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:3px 14px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#C4B5FD;margin-bottom:12px;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:28px;font-weight:700;line-height:1.2;margin-bottom:6px;position:relative;z-index:1;}
+.hero p{font-size:14px;color:rgba(255,255,255,.65);position:relative;z-index:1;margin-bottom:24px;}
+.hero-links{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;}
+.hbtn{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:7px 14px;color:#C4B5FD;text-decoration:none;font-size:12.5px;font-weight:700;transition:background .2s;}
+.hbtn:hover{background:rgba(255,255,255,.22);}
+
+.phases-grid{padding:32px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.phase-card{border-radius:14px;overflow:hidden;border:1.5px solid var(--border);background:white;text-decoration:none;display:block;transition:transform .15s,box-shadow .15s;}
+.phase-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
+.pc-hdr{padding:20px 20px 16px;color:white;}
+.pc-num{font-family:'Unbounded',sans-serif;font-size:13px;font-weight:700;opacity:.7;margin-bottom:6px;}
+.pc-title{font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;line-height:1.3;}
+.pc-sub{font-size:12px;opacity:.75;margin-top:4px;}
+.pc-body{padding:14px 20px 18px;}
+.pc-artifact{font-size:12.5px;color:var(--muted);line-height:1.4;}
+.pc-artifact strong{color:var(--art);font-weight:700;}
+.pc-btn{display:inline-flex;align-items:center;gap:5px;margin-top:12px;background:#F5F3FF;border:1.5px solid #C4B5FD;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;color:#5B21B6;}
+
+.ql-section{padding:0 40px 40px;}
+.ql-title{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.ql-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
+.ql-card{background:white;border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;transition:box-shadow .15s,border-color .15s;}
+.ql-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.07);border-color:#A5B4FC;}
+.ql-label{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.ql-name{font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:5px;line-height:1.3;}
+.ql-card a{font-size:12px;color:#2563EB;text-decoration:none;font-weight:600;}
+.ql-card a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">Neoversity Academic · Instructional Designer · Магістратура</div>
+  <h1>Пайплайн розробки дисципліни</h1>
+  <p>Повний гайд: що робити, куди йти і навіщо — покроково по 5 фазах</p>
+  <div class="hero-links">
+    <a class="hbtn" href="https://www.figma.com/board/l3BbpWLNFHSHcYbIzaU9vl/" target="_blank">🗺️ Figma борд</a>
+    <a class="hbtn" href="https://docs.google.com/spreadsheets/d/1fmjPh4i0w682fTiK4KNjOLV3Fx5nlGcYdcCfEuyLKbg/edit?gid=1283945675#gid=1283945675" target="_blank">📊 Загальний Гант</a>
+    <a class="hbtn" href="https://www.notion.so/goit/a52e256980e0421d937d7b7dd9fb95d5" target="_blank">📓 Методична розробка маг-ри</a>
+  </div>
+</div>
+
+<div class="phases-grid">
+  <a class="phase-card" href="phase-1.html">
+    <div class="pc-hdr" style="background:linear-gradient(135deg,#6D28D9,#7C3AED);">
+      <div class="pc-num">Фаза 1</div>
+      <div class="pc-title">Ініціалізація і збір вимог</div>
+      <div class="pc-sub">Отримуємо дисципліну → розуміємо масштаб → готуємо простір</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-artifact">🎁 <strong>Артефакт:</strong> Сторінка дисципліни в Notion з заповненими вхідними даними + папка на Google Drive</div>
+      <div class="pc-btn">Відкрити фазу →</div>
+    </div>
+  </a>
+
+  <a class="phase-card" href="phase-2.html">
+    <div class="pc-hdr" style="background:linear-gradient(135deg,#0E7490,#0891B2);">
+      <div class="pc-num">Фаза 2</div>
+      <div class="pc-title">Аналіз та Research</div>
+      <div class="pc-sub">Вивчаємо ринок → знаходимо автора → погоджуємо план</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-artifact">🎁 <strong>Артефакт:</strong> Заповнена сторінка дисципліни в Notion — розділ «Процес розробки»</div>
+      <div class="pc-btn">Відкрити фазу →</div>
+    </div>
+  </a>
+
+  <a class="phase-card" href="phase-3.html">
+    <div class="pc-hdr" style="background:linear-gradient(135deg,#1D4ED8,#2563EB);">
+      <div class="pc-num">Фаза 3</div>
+      <div class="pc-title">Розробка</div>
+      <div class="pc-sub">Опрацьовуємо кожну тему → силабус → огляд → живі заняття</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-artifact">🎁 <strong>Артефакт:</strong> Готова сторінка в Notion з контентом дисципліни + всі матеріали на Drive</div>
+      <div class="pc-btn">Відкрити фазу →</div>
+    </div>
+  </a>
+
+  <a class="phase-card" href="phase-4.html">
+    <div class="pc-hdr" style="background:linear-gradient(135deg,#047857,#059669);">
+      <div class="pc-num">Фаза 4</div>
+      <div class="pc-title">Підготовка до старту</div>
+      <div class="pc-sub">Заповнюємо базу знань → готуємо матеріали → перевіряємо все</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-artifact">🎁 <strong>Артефакт:</strong> База знань для викладачів і менторів з календарним планом</div>
+      <div class="pc-btn">Відкрити фазу →</div>
+    </div>
+  </a>
+
+  <a class="phase-card" href="phase-5.html">
+    <div class="pc-hdr" style="background:linear-gradient(135deg,#4C1D95,#6D28D9);">
+      <div class="pc-num">Фаза 5</div>
+      <div class="pc-title">Старт потоку</div>
+      <div class="pc-sub">Проводимо установчу зустріч → супровід → аналіз КСАТИ</div>
+    </div>
+    <div class="pc-body">
+      <div class="pc-artifact">🎁 <strong>Артефакт:</strong> Аналіз CSAT після завершення потоку</div>
+      <div class="pc-btn">Відкрити фазу →</div>
+    </div>
+  </a>
+</div>
+
+<div class="ql-section">
+  <div class="ql-title">📎 Ключові ресурси — завжди під рукою</div>
+  <div class="ql-grid">
+    <div class="ql-card"><div class="ql-label">📁 Google Drive</div><div class="ql-name">Папка Магістратура</div><a href="https://drive.google.com/drive/folders/15NJ1A59mIMLZX3herwxqDjtsGe6q2So9" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">База дисциплін Магістратура</div><a href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">Методична розробка маг-ри</div><a href="https://www.notion.so/goit/a52e256980e0421d937d7b7dd9fb95d5" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">ОПП та вимоги</div><a href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📗 Sheets</div><div class="ql-name">Загальний Гант Academic Neo</div><a href="https://docs.google.com/spreadsheets/d/1fmjPh4i0w682fTiK4KNjOLV3Fx5nlGcYdcCfEuyLKbg/edit?gid=1283945675" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📗 Sheets</div><div class="ql-name">Шаблон ресорчу конкурентів</div><a href="https://docs.google.com/spreadsheets/d/11NgSKmfYZsL1wiA2V9bonBR-zUMwZav1nzun_w6yIEM/edit" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📗 Sheets</div><div class="ql-name">Матеріали по дисциплінах · Study</div><a href="https://docs.google.com/spreadsheets/d/1_-yIu1RKi2VN1hKj88aLDlo7SHNGWWsfZ80x23Bixv0/edit" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">База знань для викладачів</div><a href="https://www.notion.so/goit/i-i-Academic-2207eab4547c42ed90cdea8bab27c857" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">Гайдбук експерта-розробника</div><a href="https://www.notion.so/goit/3113f971cef080efae4bde81473ab7a1" target="_blank">↗ Відкрити</a></div>
+    <div class="ql-card"><div class="ql-label">📓 Notion</div><div class="ql-name">Регламент CHM × Academic</div><a href="https://www.notion.so/goit/CHM-Academic-2e23f971cef080f283bec29be43984c0" target="_blank">↗ Відкрити</a></div>
+  </div>
+</div>
+
+<div class="footer">Neoversity Academic · Instructional Designer · Магістратура</div>
+</body>
+</html>
