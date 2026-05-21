@@ -5,6 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Фаза 1 · Ініціалізація і збір вимог</title>
 <link rel="stylesheet" href="shared.css">
+<style>
+/* WS CHECKLIST BLOCK */
+.ws-checklist {
+  background: white;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.ws-checklist-header {
+  background: #FFF9F0;
+  border-bottom: 1.5px solid #FDE68A;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ws-checklist-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ws-badge-red {
+  background: #EF4444;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.ws-checklist-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+}
+.ws-checklist-meta {
+  font-size: 11px;
+  color: #6B7280;
+  margin-top: 2px;
+}
+.ws-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #FFFBEB;
+  border: 1.5px solid #FCD34D;
+  border-radius: 7px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #92400E;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.ws-open-link:hover { background: #FEF3C7; }
+.ws-items { padding: 4px 0; }
+.ws-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #F3F4F6;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.4;
+  transition: background .1s;
+}
+.ws-item:last-child { border-bottom: none; }
+.ws-item:hover { background: #FAFAFA; }
+.ws-num {
+  font-size: 11px;
+  color: #9CA3AF;
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 18px;
+  margin-top: 2px;
+}
+.ws-box {
+  width: 16px; height: 16px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ws-item-text { flex: 1; }
+.ws-item-text a { color: #2563EB; text-decoration: none; font-weight: 600; }
+.ws-item-text a:hover { text-decoration: underline; }
+.ws-role { font-size: 11px; color: #9CA3AF; margin-left: 4px; }
+</style>
 </head>
 <body>
 
@@ -30,6 +123,36 @@
 
 <div class="main">
 
+  <!-- WS CHECKLIST -->
+  <div class="sec-lbl">⚙️ Чекліст Worksection для цієї фази</div>
+  <div class="ws-checklist">
+    <div class="ws-checklist-header">
+      <div class="ws-checklist-title">
+        <span class="ws-badge-red">!</span>
+        <div>
+          <div class="ws-checklist-name">[шаблон] Організація розробки нової дисципліни: інтерв'ю із кандидатом, погодження умов, створення простору для розробки</div>
+          <div class="ws-checklist-meta">#9194045 · Neoversity Academic · Daria Turko</div>
+        </div>
+      </div>
+      <a class="ws-open-link" href="https://goi1549.worksection.com/project/194984/9194045/" target="_blank">⚙️ Відкрити в Worksection</a>
+    </div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-num">1</span><div class="ws-box"></div><div class="ws-item-text">разом із методологом провести інтерв'ю із кандидатом на посаду автора дисципліни</div></div>
+      <div class="ws-item"><span class="ws-num">2</span><div class="ws-box"></div><div class="ws-item-text">погодити умови співпраці <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">3</span><div class="ws-box"></div><div class="ws-item-text">створити папку на диску <span class="ws-role">(методолог)</span>: магістратура → <a href="https://drive.google.com/drive/folders/15NJ1A59mIMLZX3herwxqDjtsGe6q2So9" target="_blank">Drive · Магістратура</a></div></div>
+      <div class="ws-item"><span class="ws-num">4</span><div class="ws-box"></div><div class="ws-item-text">створити/доповнити сторінку дисципліни в Notion <span class="ws-role">(методолог)</span>: магістратура → <a href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">Notion · Маг-ра</a></div></div>
+      <div class="ws-item"><span class="ws-num">5</span><div class="ws-box"></div><div class="ws-item-text">створити простір для комунікації <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">6</span><div class="ws-box"></div><div class="ws-item-text">взяти креди для підписання договору <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">7</span><div class="ws-box"></div><div class="ws-item-text">створити проджект план <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">8</span><div class="ws-box"></div><div class="ws-item-text">узгодити час щотижневих дзвінків <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">9</span><div class="ws-box"></div><div class="ws-item-text">надати доступи до Notion та тестового акк ЛМС <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">10</span><div class="ws-box"></div><div class="ws-item-text">провести установчу зустріч <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">11</span><div class="ws-box"></div><div class="ws-item-text">затвердити проміжні дедлайни розробки <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">12</span><div class="ws-box"></div><div class="ws-item-text">створити скелет дисципліни у ЛМС, прив'язавши до школи, продукту, потоку <span class="ws-role">(PM)</span></div></div>
+      <div class="ws-item"><span class="ws-num">13</span><div class="ws-box"></div><div class="ws-item-text">змапити із курсом Вульф <span class="ws-role">(PM)</span></div></div>
+    </div>
+  </div>
+
   <div class="artifact">
     <span class="ico">🎁</span>
     <div>
@@ -38,7 +161,7 @@
     </div>
   </div>
 
-  <div class="sec-lbl">Кроки</div>
+  <div class="sec-lbl">Кроки — що робить методолог</div>
   <div class="steps">
 
     <div class="step open">
@@ -50,13 +173,14 @@
       <div class="step-body">
         <div class="why"><span class="wi">💡</span>Без розуміння годин, кредитів і місця дисципліни в навчальному плані неможливо правильно оцінити обсяг роботи і не злетіти з дедлайном.</div>
         <ul class="notes">
-          <li>Відкриваємо Гант і знаходимо дисципліну. Дивимось: кількість годин, кредитів, тижнів</li>
-          <li>Уточнюємо у Даші та Аліни дедлайни розробки</li>
-          <li>Знаходимо дисципліну в таблиці ОПП — дивимось: який семестр, форма контролю, які дисципліни перед цим</li>
+          <li>Відкриваємо Гант і знаходимо дисципліну</li>
+          <li><strong>Дивимось на:</strong> години, кількість кредитів</li>
+          <li><strong>Дивимось на:</strong> як в межах спеціалізації — який семестр, скільки годин, яка форма контролю, які дисципліни перед цим → піде в вимоги</li>
+          <li>Питаємо у Даші і Аліни про дедлайни розробки</li>
         </ul>
         <div class="links">
           <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/1fmjPh4i0w682fTiK4KNjOLV3Fx5nlGcYdcCfEuyLKbg/edit?gid=1283945675#gid=1283945675" target="_blank">📊 Загальний Гант Academic Neo</a>
-          <a class="lnk lnk-notion" href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">📓 ОПП та вимоги</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/a52e256980e0421d937d7b7dd9fb95d5" target="_blank">📓 ОПП та вимоги</a>
         </div>
       </div>
     </div>
@@ -75,7 +199,7 @@
           <li><strong>2.3</strong> — Якщо є архів матеріалів — забрати: силабус, матеріали для живих занять</li>
         </ul>
         <div class="links">
-          <a class="lnk lnk-notion" href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">📓 Таблиця спеціалізацій / ОПП</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/a52e256980e0421d937d7b7dd9fb95d5" target="_blank">📓 ОПП та вимоги · Маг-ра</a>
           <a class="lnk lnk-notion" href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">📓 База дисциплін маг-ри (архів)</a>
         </div>
       </div>
