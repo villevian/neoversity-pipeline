@@ -5,6 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Фаза 2 · Аналіз та Research</title>
 <link rel="stylesheet" href="shared.css">
+<style>
+.artifact-visual {
+  margin: 20px 0 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 420px;
+}
+.artifact-visual img {
+  width: 100%;
+  display: block;
+}
+.screenshot-caption {
+  font-size: 11px;
+  color: #9CA3AF;
+  font-style: italic;
+  margin-top: 5px;
+  padding-left: 2px;
+}
+.step-screenshot {
+  margin: 10px 0 6px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid #E5E7EB;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+.step-screenshot img { width: 100%; display: block; }
+
+.ws-header {
+  background: #FFFBEB;
+  border: 1.5px solid #FCD34D;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 18px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ws-header-info { display: flex; align-items: center; gap: 10px; }
+.ws-badge { background: #EF4444; color: white; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+.ws-header-name { font-size: 13px; font-weight: 700; color: #111827; }
+.ws-header-sub { font-size: 11px; color: #6B7280; margin-top: 2px; }
+.ws-open-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: white; border: 1.5px solid #FCD34D; border-radius: 7px;
+  padding: 6px 14px; font-size: 12px; font-weight: 700; color: #92400E;
+  text-decoration: none; white-space: nowrap;
+}
+.ws-open-link:hover { background: #FEF3C7; }
+
+/* TOGGLE LIST */
+.toggle-list { margin: 8px 0; display: flex; flex-direction: column; gap: 4px; }
+.toggle-item { border: 1.5px solid #E5E7EB; border-radius: 8px; overflow: hidden; background: #FAFAFA; }
+.toggle-hdr {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px; cursor: pointer; font-size: 13px;
+  font-weight: 600; color: #374151; transition: background .15s;
+}
+.toggle-hdr:hover { background: #F3F4F6; }
+.toggle-arrow { color: #9CA3AF; font-size: 11px; transition: transform .2s; flex-shrink: 0; }
+.toggle-item.open .toggle-arrow { transform: rotate(90deg); }
+.toggle-body { display: none; padding: 6px 12px 10px 28px; }
+.toggle-item.open .toggle-body { display: block; }
+.toggle-body ul { list-style: none; }
+.toggle-body ul li { font-size: 12.5px; color: #374151; padding: 2px 0; display: flex; gap: 7px; }
+.toggle-body ul li::before { content: '•'; color: #9CA3AF; flex-shrink: 0; }
+.toggle-body a { color: #2563EB; text-decoration: none; font-weight: 600; }
+.toggle-body a:hover { text-decoration: underline; }
+
+.tip-box {
+  background: #F0FDF4; border: 1.5px solid #86EFAC; border-radius: 8px;
+  padding: 8px 12px; margin: 8px 0; font-size: 12.5px; color: #166534;
+  display: flex; gap: 7px; align-items: flex-start; line-height: 1.5;
+}
+</style>
 </head>
 <body>
 
@@ -30,65 +106,102 @@
 
 <div class="main">
 
-  <div class="ws-tag">
-    <span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);">Worksection шаблон:</span>
-    <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9173933/" target="_blank">⚙️ #9173933 · Ресьоч ринку/конкурентів/вакансій</a>
-  </div>
-
-  <div class="artifact">
-    <span class="ico">🎁</span>
-    <div>
-      <div class="a-lbl">Артефакт фази</div>
-      <div class="a-txt">Заповнена сторінка дисципліни в Notion — розділ «Процес розробки»</div>
+  <!-- WS -->
+  <div class="ws-header">
+    <div class="ws-header-info">
+      <span class="ws-badge">!</span>
+      <div>
+        <div class="ws-header-name">Чекліст Worksection для цієї фази</div>
+        <div class="ws-header-sub">#9173933 · Ресьоч ринку / конкурентів / вакансій</div>
+      </div>
     </div>
+    <a class="ws-open-link" href="https://goi1549.worksection.com/project/194984/9173933/" target="_blank">⚙️ Відкрити в Worksection</a>
   </div>
 
-  <div class="sec-lbl">Кроки</div>
+  <!-- ARTIFACT VISUAL -->
+  <div class="artifact-visual">
+    <img src="img/artifact-phase2.png" alt="Артефакт фази 2">
+  </div>
+  <div class="screenshot-caption">Артефакт фази — заповнена сторінка дисципліни в Notion, розділ «Процес розробки»</div>
+
+  <div class="sec-lbl" style="margin-top:20px;">Кроки</div>
   <div class="steps">
 
-    <div class="step">
+    <!-- КРОК 1 -->
+    <div class="step open">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">1</div>
-        <div class="step-title">Робимо копію шаблону ресорчу в папку дисципліни</div>
+        <div class="step-title">Робимо копію шаблону research в папку дисципліни</div>
         <div class="step-arrow">▶</div>
       </div>
       <div class="step-body">
-        <div class="why"><span class="wi">💡</span>Шаблон ресорчу — єдине місце де збираємо всю інформацію по конкурентах, вимогах і драфті НП. Без копії в папці дисципліни документ "загубиться" в спільних файлах.</div>
+        <div class="why"><span class="wi">💡</span>Шаблон research — єдине місце де збираємо всю інформацію по конкурентах, вимогах і драфті НП. Без копії в папці дисципліни документ загубиться в спільних файлах.</div>
         <div class="links">
-          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/11NgSKmfYZsL1wiA2V9bonBR-zUMwZav1nzun_w6yIEM/edit" target="_blank">📗 Шаблон ресорчу — зробити копію</a>
+          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/11NgSKmfYZsL1wiA2V9bonBR-zUMwZav1nzun_w6yIEM/edit" target="_blank">📗 Шаблон research — зробити копію</a>
+        </div>
+
+        <div class="tip-box" style="margin-top:12px;">
+          <span>✅</span>
+          <span>Дуже раджу: одразу перенести в копію шаблону всі вхідні артефакти дисципліни — щоб все було в одному місці</span>
+        </div>
+
+        <!-- TOGGLE LIST артефактів -->
+        <div class="toggle-list">
+          <div class="toggle-item open">
+            <div class="toggle-hdr" onclick="toggleItem(this)">
+              <span class="toggle-arrow">▶</span>
+              <span>📋 Що переносимо — артефакти вхідних даних</span>
+            </div>
+            <div class="toggle-body">
+              <ul>
+                <li>Опис програми (спеціалізація, форма контролю, семестр, кредити) → <a href="https://www.notion.so/goit/f55b9d58c3cb4a2db065ef0a1fe1a9ff" target="_blank">Опис програм магістратури</a></li>
+                <li>Навчальний план (ОПП) → <a href="https://www.notion.so/goit/28642272f88a4cb295b1fd75c23b3987" target="_blank">Програми курсів магістратури</a></li>
+                <li>Дані з Ганту: кількість годин, тижнів, кредитів → <a href="https://docs.google.com/spreadsheets/d/1fmjPh4i0w682fTiK4KNjOLV3Fx5nlGcYdcCfEuyLKbg/edit?gid=1283945675#gid=1283945675" target="_blank">Загальний Гант</a></li>
+                <li>Наявні матеріали (якщо є): силабус, матеріали живих занять</li>
+                <li>Особливості та пререквізити дисципліни</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- КРОК 2 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">2</div>
-        <div class="step-title">Опціонально, але дуже раджу: перенести вимоги в цей шаблон</div>
+        <div class="step-title">Опціонально, але дуже раджу: перенести вимоги в шаблон</div>
         <div class="step-arrow">▶</div>
       </div>
       <div class="step-body">
-        <div class="why"><span class="wi">💡</span>Коли вимоги і ресорч в одному файлі — легше бачити чи відповідає знайдений контент тому що потрібно. Не треба перемикатися між вкладками.</div>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-hdr" onclick="toggleStep(this)">
-        <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">3</div>
-        <div class="step-title">Починаємо з ресорчу конкурентів</div>
-        <div class="step-arrow">▶</div>
-      </div>
-      <div class="step-body">
-        <div class="why"><span class="wi">💡</span>Ресорч конкурентів показує що є на ринку — це допомагає зробити нашу дисципліну кращою або принаймні не гіршою. Без цього ризикуємо розробити "застарілий" курс.</div>
-        <ul class="notes">
-          <li>Дивимось вимоги до дисципліни, опис: магістратура в Notion</li>
-          <li>Заповнюємо шаблон ресорчу</li>
-        </ul>
+        <div class="why"><span class="wi">💡</span>Коли вимоги і research в одному файлі — легше бачити чи відповідає знайдений контент тому що потрібно. Не треба перемикатися між вкладками.</div>
         <div class="links">
-          <a class="lnk lnk-notion" href="https://www.notion.so/goit/1813f971cef0800490b0d39226ace238" target="_blank">📓 Вимоги до дисципліни (ОПП)</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/a52e256980e0421d937d7b7dd9fb95d5" target="_blank">📓 Методична розробка основного контенту маг. програм</a>
         </div>
       </div>
     </div>
 
+    <!-- КРОК 3 -->
+    <div class="step">
+      <div class="step-hdr" onclick="toggleStep(this)">
+        <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">3</div>
+        <div class="step-title">Починаємо з research конкурентів</div>
+        <div class="step-arrow">▶</div>
+      </div>
+      <div class="step-body">
+        <div class="why"><span class="wi">💡</span>Research конкурентів показує що є на ринку — це допомагає зробити нашу дисципліну кращою або принаймні не гіршою. Без цього ризикуємо розробити "застарілий" курс.</div>
+        <ul class="notes">
+          <li>Дивимось вимоги до дисципліни та опис — магістратура в Notion</li>
+          <li>Заповнюємо шаблон research</li>
+        </ul>
+        <div class="links">
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/f55b9d58c3cb4a2db065ef0a1fe1a9ff" target="_blank">📓 Опис програм магістратури</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/28642272f88a4cb295b1fd75c23b3987" target="_blank">📓 Програми курсів магістратури</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- КРОК 4 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">4</div>
@@ -100,10 +213,11 @@
       </div>
     </div>
 
+    <!-- КРОК 5 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">5</div>
-        <div class="step-title">Лінкуємо ресорч до сторінки дисципліни в Notion</div>
+        <div class="step-title">Лінкуємо research до сторінки дисципліни в Notion</div>
         <div class="step-arrow">▶</div>
       </div>
       <div class="step-body">
@@ -114,6 +228,7 @@
       </div>
     </div>
 
+    <!-- КРОК 6 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">6</div>
@@ -124,15 +239,16 @@
         <div class="why"><span class="wi">💡</span>Профіль автора потрібен HR і рекрутерам для пошуку і підписання договору. Без нього процес онбордингу автора зупиняється.</div>
         <ul class="notes">
           <li>Для магістратури — профіль робиться на сторінці дисципліни в Notion у відповідному розділі</li>
-          <li>Передаємо Аліні — вона поставить таску рекрутерам (опціонально, за потреби)</li>
+          <li>Передаємо Аліні — вона поставить таску рекрутерам (за потреби)</li>
         </ul>
         <div class="links">
-          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Neoversity-6c39748050674a029954bfe19735e883" target="_blank">📓 Опис профілів викладачів та менторів</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Neoversity-6c39748050674a029954bfe19735e883" target="_blank">📓 Профілі викладачів та менторів</a>
           <a class="lnk lnk-notion" href="https://www.notion.so/goit/Neoversity-2713f971cef08071bea7c9b1d1590219" target="_blank">📓 Профіль посади Автора дисципліни</a>
         </div>
       </div>
     </div>
 
+    <!-- КРОК 7 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">7</div>
@@ -142,7 +258,7 @@
       <div class="step-body">
         <div class="why"><span class="wi">💡</span>Установча зустріч — момент коли ми і автор синхронізуємось по змісту, формату і очікуваннях. Якщо автор вже є — починаємо з цього кроку, але бажано мати хоча б нотатки про дисципліну.</div>
         <ul class="notes">
-          <li>Що за дисципліна взагалом — короткий огляд</li>
+          <li>Що за дисципліна взагалі — короткий огляд</li>
           <li>Особливості: які спеціалізації, які дисципліни взаємопов'язані, яка форма контролю</li>
           <li>Показуємо наш драфт НП, обговорюємо</li>
           <li>Одразу запитуємо щодо практики і домашніх завдань (що думає експерт)</li>
@@ -150,6 +266,7 @@
       </div>
     </div>
 
+    <!-- КРОК 8 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">8</div>
@@ -157,9 +274,9 @@
         <div class="step-arrow">▶</div>
       </div>
       <div class="step-body">
-        <div class="why"><span class="wi">💡</span>Якщо автор отримав чітке ДЗ з критеріями — шанс отримати якісний результат суттєво вищий. Без цього "драфт навчального плану" може означати що завгодно.</div>
+        <div class="why"><span class="wi">💡</span>Якщо автор отримав чітке ДЗ з критеріями — шанс отримати якісний результат суттєво вищий.</div>
         <ul class="notes">
-          <li>Робити в окремій вкладці шаблону ресорчу</li>
+          <li>Робити в окремій вкладці шаблону research</li>
           <li>Просимо прописати не тільки заняття, а й приблизний план — що буде на кожному</li>
           <li>Одразу починати думати про розбаловку балів</li>
           <li>Увага на тиждень мідтьормів при плануванні ДЗ і проєктів</li>
@@ -168,6 +285,7 @@
       </div>
     </div>
 
+    <!-- КРОК 9 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">9</div>
@@ -179,6 +297,7 @@
       </div>
     </div>
 
+    <!-- КРОК 10 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#A5F3FC;color:#0C4A6E;">10</div>
@@ -197,18 +316,19 @@
           <div class="nb-item">Форма фінального контролю <span class="who">методолог з ОПП</span></div>
           <div class="nb-section">Документи (посилання)</div>
           <div class="nb-item">План розробки курсу <span class="who">додає PM</span></div>
-          <div class="nb-item nb-hl">📌 Папка на диску, куди складаємо ВСІ документи <span class="who">додає методолог</span></div>
+          <div class="nb-item nb-hl">📌 Папка на диску — куди складаємо ВСІ документи <span class="who">додає методолог</span></div>
           <div class="nb-item">Драфт навчального плану <span class="who">додає методолог</span></div>
           <div class="nb-item">Затверджений навчальний план <span class="who">додає методолог</span></div>
           <div class="nb-item">Силабус <span class="who">додає методолог</span></div>
           <div class="nb-item">Назва дисципліни в адмінці <span class="who">додає PM</span></div>
           <div class="nb-section">Контент дисципліни</div>
           <div class="nb-item">Методичні рекомендації для живих занять</div>
-          <div class="nb-item">Нарахування балів за дисципліну <span class="who">методолог — попередньо на 1-2 міті, далі коригує</span></div>
+          <div class="nb-item">Нарахування балів <span class="who">методолог — попередньо на 1-2 міті, далі коригує</span></div>
           <div class="nb-item">Кількість робіт що перевіряються вручну <span class="who">методолог — попередньо на 1-2 міті, далі коригує</span></div>
         </div>
         <div class="links" style="margin-top:10px;">
-          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">📓 База дисципліни Магістратура</a>
+          <a class="lnk lnk-notion" href="https://www.notion.so/goit/Notion-529e259a971f466d80d2b1abbc45a297" target="_blank">📓 База дисциплін Магістратура</a>
+          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/1_-yIu1RKi2VN1hKj88aLDlo7SHNGWWsfZ80x23Bixv0/edit?gid=0#gid=0" target="_blank">📗 Зведена таблиця матеріалів · Study</a>
         </div>
       </div>
     </div>
@@ -222,6 +342,9 @@
 </div>
 
 <div class="footer">Neoversity Academic · Instructional Designer · Магістратура</div>
-<script>function toggleStep(hdr){hdr.closest('.step').classList.toggle('open');}</script>
+<script>
+function toggleStep(hdr){ hdr.closest('.step').classList.toggle('open'); }
+function toggleItem(hdr){ hdr.closest('.toggle-item').classList.toggle('open'); }
+</script>
 </body>
 </html>
