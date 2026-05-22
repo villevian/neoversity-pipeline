@@ -6,30 +6,39 @@
 <title>Фаза 3 · Розробка</title>
 <link rel="stylesheet" href="shared.css">
 <style>
-.artifact-visual { margin: 20px 0 6px; border-radius: 10px; overflow: hidden; max-width: 480px; }
-.artifact-visual img { width: 100%; display: block; }
-.step-screenshot { margin: 10px 0 4px; border-radius: 8px; overflow: hidden; border: 1.5px solid #E5E7EB; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
-.step-screenshot img { width: 100%; display: block; }
-.screenshot-caption { font-size: 11px; color: #9CA3AF; font-style: italic; margin-top: 4px; margin-bottom: 8px; padding-left: 2px; }
-
-.ws-header {
-  background: #FFFBEB; border: 1.5px solid #FCD34D; border-radius: 10px;
-  padding: 12px 16px; margin: 18px 0 10px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+.artifact-box {
+  background: #F01D8C;
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 480px;
 }
-.ws-header-info { display: flex; align-items: center; gap: 10px; }
-.ws-badge { background: #EF4444; color: white; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 800; flex-shrink: 0; }
-.ws-header-name { font-size: 13px; font-weight: 700; color: #111827; }
-.ws-header-sub { font-size: 11px; color: #6B7280; margin-top: 2px; }
-.ws-open-link {
-  display: inline-flex; align-items: center; gap: 5px;
-  background: white; border: 1.5px solid #FCD34D; border-radius: 7px;
-  padding: 6px 14px; font-size: 12px; font-weight: 700; color: #92400E;
+
+.step-screenshot {
+  margin: 10px 0 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+.step-screenshot img { width: 100%; display: block; }
+.screenshot-caption {
+  font-size: 11px; color: #9CA3AF;
+  font-style: italic; margin: 3px 0 10px; padding-left: 2px;
+}
+
+.ws-links { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 20px; }
+.ws-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #FFFBEB; border: 1.5px solid #FCD34D; border-radius: 7px;
+  padding: 6px 13px; font-size: 12px; font-weight: 700; color: #92400E;
   text-decoration: none; white-space: nowrap;
 }
-.ws-open-link:hover { background: #FEF3C7; }
-
-.ws-pair { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 10px; }
+.ws-btn:hover { background: #FEF3C7; }
 </style>
 </head>
 <body>
@@ -56,27 +65,23 @@
 
 <div class="main">
 
-  <!-- WS HEADERS -->
-  <div class="ws-pair">
-    <a class="ws-open-link" href="https://goi1549.worksection.com/project/194984/9172991/" target="_blank">⚙️ #9172991 · Методичне опрацювання контенту теми</a>
-    <a class="ws-open-link" href="https://goi1549.worksection.com/project/194984/9194165/" target="_blank">⚙️ #9194165 · Контент живого заняття</a>
-    <a class="ws-open-link" href="https://goi1549.worksection.com/project/194984/9173627/" target="_blank">⚙️ #9173627 · Створення первинних навч. планів / силабусів</a>
+  <div class="ws-links">
+    <a class="ws-btn" href="https://goi1549.worksection.com/project/194984/9172991/" target="_blank">⚙️ #9172991 · Методичне опрацювання теми</a>
+    <a class="ws-btn" href="https://goi1549.worksection.com/project/194984/9194165/" target="_blank">⚙️ #9194165 · Контент живого заняття</a>
+    <a class="ws-btn" href="https://goi1549.worksection.com/project/194984/9173627/" target="_blank">⚙️ #9173627 · Навч. плани / силабуси</a>
   </div>
 
-  <!-- ARTIFACT -->
-  <div class="artifact-visual">
-    <img src="img/artifact-phase3.png" alt="Артефакт фази 3">
+  <div class="artifact-box">
+    Артефакт: готова сторінка в Notion з контентом дисципліни + всі матеріали на Google Drive (прези) + силабус
   </div>
-  <div class="screenshot-caption">Артефакт фази — готова сторінка в Notion з контентом дисципліни + всі матеріали на Google Drive (прези) + силабус</div>
 
-  <div class="sec-lbl" style="margin-top:20px;">Кроки</div>
+  <div class="sec-lbl">Кроки</div>
   <div class="steps">
 
-    <!-- 1 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">1</div>
-        <div class="step-title">Домовляємось про формат "вигрузки" матеріалів з автором</div>
+        <div class="step-title">Домовляємось про формат вигрузки матеріалів з автором</div>
         <div class="step-arrow">▶</div>
       </div>
       <div class="step-body">
@@ -86,7 +91,6 @@
       </div>
     </div>
 
-    <!-- 2 -->
     <div class="step open">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">2</div>
@@ -95,16 +99,14 @@
       </div>
       <div class="step-body">
         <div class="step-screenshot">
-          <img src="img/p3-ws-subtasks.png" alt="WS #9172991 підзадачі">
+          <img src="img/p3-ws-subtasks.png" alt="WS підзадачі">
         </div>
-        <div class="screenshot-caption">WS #9172991 · підзадачі на кожну тему</div>
         <div class="links">
-          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9172991/" target="_blank">⚙️ Шаблон таски #9172991</a>
+          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9172991/" target="_blank">⚙️ #9172991</a>
         </div>
       </div>
     </div>
 
-    <!-- 3 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">3</div>
@@ -118,7 +120,6 @@
       </div>
     </div>
 
-    <!-- 4 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">4</div>
@@ -129,14 +130,13 @@
         <div class="step-screenshot">
           <img src="img/p3-syllabus-table.png" alt="Таблиця силабусу">
         </div>
-        <div class="screenshot-caption">Скрін з бакалаврату — для магістратури вносити дані сюди:</div>
+        <div class="screenshot-caption">Скрін з бакалаврату — для магістратури вносити тут:</div>
         <div class="links">
-          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/1y2u-IqwSNtodxjT3lymp7vd_4Lhka9yaV0nkLIggiEw/edit" target="_blank">📗 Info Product · Магістратура (силабус)</a>
+          <a class="lnk lnk-sheet" href="https://docs.google.com/spreadsheets/d/1y2u-IqwSNtodxjT3lymp7vd_4Lhka9yaV0nkLIggiEw/edit" target="_blank">📗 Info Product · Магістратура</a>
         </div>
       </div>
     </div>
 
-    <!-- 5 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">5</div>
@@ -152,7 +152,6 @@
       </div>
     </div>
 
-    <!-- 6 -->
     <div class="step open">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">6</div>
@@ -161,19 +160,14 @@
       </div>
       <div class="step-body">
         <div class="step-screenshot">
-          <img src="img/p3-step6-ws.png" alt="Крок 6 з WS #9194165">
+          <img src="img/p3-ws-9194165.png" alt="WS #9194165">
         </div>
-        <div class="step-screenshot" style="margin-top:8px;">
-          <img src="img/p3-ws-9194165.png" alt="WS #9194165 чекліст">
-        </div>
-        <div class="screenshot-caption">WS #9194165 · Створення/опрацювання контенту живого заняття</div>
         <div class="links">
-          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9194165/" target="_blank">⚙️ Шаблон таски #9194165</a>
+          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9194165/" target="_blank">⚙️ #9194165</a>
         </div>
       </div>
     </div>
 
-    <!-- 7 -->
     <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">7</div>
@@ -183,13 +177,11 @@
       <div class="step-body">
         <div class="links">
           <a class="lnk lnk-notion" href="https://www.notion.so/goit/Neoversity-6c39748050674a029954bfe19735e883" target="_blank">📓 Профілі викладачів та менторів</a>
-          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9240650/" target="_blank">⚙️ WS #9240650</a>
         </div>
       </div>
     </div>
 
-    <!-- 8 -->
-    <div class="step open">
+    <div class="step">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">8</div>
         <div class="step-title">Створити бекап всіх матеріалів (конспекти, ДЗ) на Google Drive</div>
@@ -202,7 +194,6 @@
       </div>
     </div>
 
-    <!-- 9 -->
     <div class="step open">
       <div class="step-hdr" onclick="toggleStep(this)">
         <div class="snum" style="background:#BFDBFE;color:#1E3A8A;">9</div>
@@ -211,14 +202,10 @@
       </div>
       <div class="step-body">
         <div class="step-screenshot">
-          <img src="img/p3-steps8-9.png" alt="Кроки 8 і 9 з Figma">
+          <img src="img/p3-ws-9173627.png" alt="WS #9173627">
         </div>
-        <div class="step-screenshot" style="margin-top:8px;">
-          <img src="img/p3-ws-9173627.png" alt="WS #9173627 чекліст">
-        </div>
-        <div class="screenshot-caption">WS #9173627 · Створення первинних навчальних планів / силабусів — магістратура → <a href="https://www.notion.so/goit/9ce022195bc849759d7d5a968528a7aa" target="_blank" style="color:#2563EB;font-weight:600;">силабус маг-ри в Notion</a></div>
         <div class="links">
-          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9173627/" target="_blank">⚙️ Шаблон таски #9173627</a>
+          <a class="lnk lnk-ws" href="https://goi1549.worksection.com/project/194984/9173627/" target="_blank">⚙️ #9173627</a>
           <a class="lnk lnk-notion" href="https://www.notion.so/goit/9ce022195bc849759d7d5a968528a7aa" target="_blank">📓 Силабус маг-ри · Notion</a>
         </div>
       </div>
@@ -228,7 +215,7 @@
 
   <div style="margin-top:32px;display:flex;gap:12px;justify-content:space-between;">
     <a class="lnk lnk-notion" href="phase-2.html" style="padding:8px 18px;font-size:13px;">← Фаза 2</a>
-    <a class="lnk lnk-notion" href="phase-4.html" style="padding:8px 18px;font-size:13px;">Фаза 4: Підготовка →</a>
+    <a class="lnk lnk-notion" href="phase-4.html" style="padding:8px 18px;font-size:13px;">Фаза 4 →</a>
   </div>
 </div>
 
